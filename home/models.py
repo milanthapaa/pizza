@@ -24,7 +24,7 @@ class Pizza(BaseModel):
 
 
 class Cart(BaseModel):
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, related_name="carts")
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, related_name="carts", null=True, blank=True)
     is_paid = models.BooleanField(default=False)
 
 
